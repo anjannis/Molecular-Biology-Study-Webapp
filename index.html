@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Molecular Biology Exam Prep</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ============ TOP NAV ============ -->
+  <header class="topbar">
+    <div class="topbar-brand" data-nav="dashboard" tabindex="0" role="button">
+      <span class="brand-mark">MB</span>
+      <span class="brand-title">Molecular Biology Prep</span>
+    </div>
+    <nav class="topbar-nav">
+      <button class="nav-btn" data-nav="dashboard">Dashboard</button>
+      <button class="nav-btn" data-nav="study">Study</button>
+      <button class="nav-btn" data-nav="flashcards">Flashcards</button>
+      <button class="nav-btn" data-nav="practice">Practice</button>
+      <button class="nav-btn" data-nav="weakspots">Weak Spots</button>
+    </nav>
+    <div class="topbar-actions">
+      <button id="btn-reset-progress" class="btn-ghost" title="Reset local progress">Reset Progress</button>
+    </div>
+  </header>
+
+  <!-- mobile nav -->
+  <nav class="mobilenav">
+    <button class="nav-btn" data-nav="dashboard">Home</button>
+    <button class="nav-btn" data-nav="study">Study</button>
+    <button class="nav-btn" data-nav="flashcards">Cards</button>
+    <button class="nav-btn" data-nav="practice">Practice</button>
+    <button class="nav-btn" data-nav="weakspots">Weak</button>
+  </nav>
+
+  <main id="view-root" class="view-root">
+    <!-- ============ DASHBOARD VIEW ============ -->
+    <section id="view-dashboard" class="view">
+      <div class="view-header">
+        <h1>Your Readiness</h1>
+        <p class="muted">Nine units from the course material. Local-only, private, and saved automatically.</p>
+      </div>
+      <div class="dashboard-grid">
+        <div class="card readiness-card">
+          <div class="readiness-ring-wrap">
+            <svg viewBox="0 0 120 120" class="readiness-ring">
+              <circle cx="60" cy="60" r="52" class="ring-track"/>
+              <circle cx="60" cy="60" r="52" class="ring-progress" id="readiness-ring-progress"/>
+            </svg>
+            <div class="readiness-number" id="readiness-number">0%</div>
+          </div>
+          <div class="readiness-copy">
+            <div class="readiness-label">Overall readiness</div>
+            <div class="readiness-sub" id="readiness-sub">Start studying to build a baseline.</div>
+          </div>
+        </div>
+        <div class="card next-activity-card">
+          <div class="card-label">Next best step</div>
+          <div id="next-activity-body" class="next-activity-body"></div>
+          <button id="btn-start-next" class="btn-primary">Start</button>
+        </div>
+        <div class="card queue-card">
+          <div class="card-label">Review queue</div>
+          <div id="queue-stats" class="queue-stats"></div>
+        </div>
+      </div>
+
+      <h2 class="section-title">Units</h2>
+      <div id="unit-grid" class="unit-grid"></div>
+
+      <h2 class="section-title">Recently studied</h2>
+      <div id="recent-list" class="recent-list"></div>
+    </section>
+
+    <!-- ============ STUDY VIEW ============ -->
+    <section id="view-study" class="view">
+      <div class="study-layout">
+        <aside class="study-tree" id="study-tree"></aside>
+        <div class="study-content" id="study-content">
+          <div class="empty-state">Pick a topic from the left to begin.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FLASHCARDS VIEW ============ -->
+    <section id="view-flashcards" class="view">
+      <div id="flashcards-setup" class="setup-panel">
+        <h1>Flashcards</h1>
+        <p class="muted">Cards follow the lecture/topic hierarchy. Rate your recall honestly — the scheduler adapts.</p>
+        <div class="filter-row">
+          <label><input type="radio" name="fc-filter" value="due" checked> Due now</label>
+          <label><input type="radio" name="fc-filter" value="unseen"> Unseen</label>
+          <label><input type="radio" name="fc-filter" value="weak"> Weak concepts</label>
+          <label><input type="radio" name="fc-filter" value="all"> All</label>
+        </div>
+        <div class="filter-row" id="fc-lecture-filter"></div>
+        <button id="btn-start-flashcards" class="btn-primary">Start session</button>
+        <div id="fc-empty-msg" class="muted" style="display:none;margin-top:10px;">No cards match this filter right now.</div>
+      </div>
+      <div id="flashcards-session" class="session-panel" style="display:none;">
+        <div class="session-progress"><div id="fc-progress-bar" class="progress-bar-fill"></div></div>
+        <div class="fc-counter" id="fc-counter"></div>
+        <div class="flashcard-stage" id="flashcard-stage">
+          <div class="flashcard" id="flashcard" tabindex="0">
+            <div class="flashcard-face flashcard-front" id="flashcard-front"></div>
+            <div class="flashcard-face flashcard-back" id="flashcard-back" style="display:none;"></div>
+          </div>
+        </div>
+        <div class="fc-hint muted">Space / click to flip</div>
+        <div class="fc-rate-row" id="fc-rate-row" style="visibility:hidden;">
+          <button class="rate-btn rate-again" data-rate="1">1 · Again</button>
+          <button class="rate-btn rate-hard" data-rate="2">2 · Hard</button>
+          <button class="rate-btn rate-good" data-rate="3">3 · Good</button>
+          <button class="rate-btn rate-easy" data-rate="4">4 · Easy</button>
+        </div>
+      </div>
+      <div id="flashcards-done" class="setup-panel" style="display:none;">
+        <h1>Session complete</h1>
+        <div id="fc-summary"></div>
+        <button class="btn-primary" data-nav="dashboard">Back to dashboard</button>
+      </div>
+    </section>
+
+    <!-- ============ PRACTICE VIEW ============ -->
+    <section id="view-practice" class="view">
+      <div id="practice-setup" class="setup-panel">
+        <h1>Practice</h1>
+        <p class="muted">Choose a mode. Exam simulations withhold feedback until you submit.</p>
+        <div class="practice-modes">
+          <button class="mode-card" data-mode="topic">
+            <div class="mode-title">Topic quiz</div>
+            <div class="mode-desc">Pick one topic, answer its questions, get feedback immediately.</div>
+          </button>
+          <button class="mode-card" data-mode="adaptive">
+            <div class="mode-title">Adaptive mixed quiz</div>
+            <div class="mode-desc">Questions drawn across units, weighted toward your weak spots.</div>
+          </button>
+          <button class="mode-card" data-mode="exam">
+            <div class="mode-title">Timed exam simulation</div>
+            <div class="mode-desc">Fixed-length, timed, feedback withheld until submission.</div>
+          </button>
+        </div>
+        <div id="practice-topic-picker" class="filter-row" style="display:none;"></div>
+        <div id="practice-exam-options" class="filter-row" style="display:none;">
+          <label>Questions: <select id="exam-length"><option value="10">10</option><option value="20" selected>20</option><option value="30">30</option></select></label>
+          <label>Minutes: <select id="exam-minutes"><option value="10">10</option><option value="20" selected>20</option><option value="30">30</option><option value="40">40</option></select></label>
+        </div>
+        <button id="btn-start-practice" class="btn-primary" style="display:none;">Start</button>
+      </div>
+
+      <div id="quiz-session" class="session-panel" style="display:none;">
+        <div class="session-progress"><div id="quiz-progress-bar" class="progress-bar-fill"></div></div>
+        <div class="quiz-topbar">
+          <div class="quiz-counter" id="quiz-counter"></div>
+          <div class="quiz-timer" id="quiz-timer" style="display:none;"></div>
+        </div>
+        <div class="question-card">
+          <div class="question-stem" id="question-stem"></div>
+          <div class="question-options" id="question-options"></div>
+          <div class="question-feedback" id="question-feedback" style="display:none;"></div>
+        </div>
+        <div class="quiz-actions">
+          <button id="btn-quiz-next" class="btn-primary" style="display:none;">Next</button>
+          <button id="btn-quiz-submit-exam" class="btn-primary" style="display:none;">Submit exam</button>
+        </div>
+      </div>
+
+      <div id="quiz-results" class="setup-panel" style="display:none;">
+        <h1>Results</h1>
+        <div id="results-summary"></div>
+        <div id="results-review"></div>
+        <button class="btn-primary" data-nav="dashboard">Back to dashboard</button>
+      </div>
+    </section>
+
+    <!-- ============ WEAK SPOTS VIEW ============ -->
+    <section id="view-weakspots" class="view">
+      <div class="view-header">
+        <h1>Weak Spots</h1>
+        <p class="muted">Concepts aggregated across study, flashcards, and quizzes — weakest first.</p>
+      </div>
+      <div id="weakspots-list" class="weakspots-list"></div>
+    </section>
+  </main>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<div id="confirm-modal" class="modal-backdrop" style="display:none;">
+  <div class="modal">
+    <div class="modal-title" id="confirm-title">Are you sure?</div>
+    <div class="modal-body" id="confirm-body"></div>
+    <div class="modal-actions">
+      <button class="btn-ghost" id="confirm-cancel">Cancel</button>
+      <button class="btn-danger" id="confirm-ok">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/data/base.js"></script>
+<script src="js/data/01-dna.js"></script>
+<script src="js/data/02-rna.js"></script>
+<script src="js/data/03-proteins.js"></script>
+<script src="js/data/04-lipids.js"></script>
+<script src="js/data/05-sugars.js"></script>
+<script src="js/data/06-cell-organelles.js"></script>
+<script src="js/data/07-genomics.js"></script>
+<script src="js/data/08-transcriptomics.js"></script>
+<script src="js/data/09-dna-storage.js"></script>
+<script src="js/util.js"></script>
+<script src="js/persistence.js"></script>
+<script src="js/mastery.js"></script>
+<script src="js/router.js"></script>
+<script src="js/question-widget.js"></script>
+<script src="js/ui-dashboard.js"></script>
+<script src="js/ui-study.js"></script>
+<script src="js/ui-flashcards.js"></script>
+<script src="js/ui-quiz.js"></script>
+<script src="js/ui-weakspots.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
