@@ -6,7 +6,7 @@ var path = require('path');
 var dataDir = path.join(__dirname, 'js', 'data');
 var files = ['base.js', '01-dna.js', '02-rna.js', '03-proteins.js', '04-lipids.js',
              '05-sugars.js', '06-cell-organelles.js', '07-genomics.js',
-             '08-transcriptomics.js', '09-dna-storage.js'];
+             '08-transcriptomics.js'];
 files.forEach(function (f) {
   var code = fs.readFileSync(path.join(dataDir, f), 'utf8');
   vmRun(code, f);
@@ -21,8 +21,8 @@ var MOLBIO = global.MOLBIO;
 var errors = [];
 var warnings = [];
 
-// --- Expect exactly 9 lectures ---
-if (MOLBIO.lectures.length !== 9) errors.push('Expected 9 lectures, found ' + MOLBIO.lectures.length);
+// --- Expect exactly 8 lectures ---
+if (MOLBIO.lectures.length !== 8) errors.push('Expected 8 lectures, found ' + MOLBIO.lectures.length);
 
 var topicById = {};
 MOLBIO.topics.forEach(function (t) { topicById[t.id] = t; });

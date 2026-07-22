@@ -55,10 +55,10 @@ function wait(ms) { return new Promise(r => setTimeout(r, ms)); }
   function check(label, cond) { results.push({label, ok: !!cond}); }
 
   check('App defined', win.App && win.App.state && win.App.state.mastery);
-  check('MOLBIO loaded (9 lectures)', win.MOLBIO.lectures.length === 9);
+  check('MOLBIO loaded (8 lectures)', win.MOLBIO.lectures.length === 8);
   check('Dashboard is active view by default', win.document.querySelector('#view-dashboard').classList.contains('active'));
 
-  check('Unit grid has 9 cards', win.document.querySelectorAll('.unit-card').length === 9);
+  check('Unit grid has 8 cards', win.document.querySelectorAll('.unit-card').length === 8);
   check('Readiness number rendered', /%/.test(win.document.querySelector('#readiness-number').textContent));
 
   win.Router.go('study', {topicId: 'dna-structure'});
@@ -122,7 +122,7 @@ function wait(ms) { return new Promise(r => setTimeout(r, ms)); }
 
   win.Router.go('weakspots');
   await wait(20);
-  check('Weak spots list has 54 rows (all topics ranked)', win.document.querySelectorAll('.weakspot-row').length === 54);
+  check('Weak spots list has 48 rows (all topics ranked)', win.document.querySelectorAll('.weakspot-row').length === 48);
 
   // --- Persistence round-trip across a simulated reload (fresh window, same storage contents) ---
   win.Persistence.saveNow(win.App.state.progress);
@@ -143,8 +143,8 @@ function wait(ms) { return new Promise(r => setTimeout(r, ms)); }
   await wait(600);
   check('Corrupt localStorage falls back to default progress, no crash',
     dom3.window.App.state.mastery.overallReadiness() === 0);
-  check('Course content still fully intact after corrupt progress (9 lectures, 54 topics)',
-    dom3.window.MOLBIO.lectures.length === 9 && dom3.window.MOLBIO.topics.length === 54);
+  check('Course content still fully intact after corrupt progress (8 lectures, 48 topics)',
+    dom3.window.MOLBIO.lectures.length === 8 && dom3.window.MOLBIO.topics.length === 48);
 
   // --- Reset progress button + confirm modal wiring (on original window) ---
   win.document.querySelector('#btn-reset-progress').click();

@@ -154,9 +154,9 @@
       visual: {type: 'facts', items: [
         {label: '~1%', detail: 'of the human genome is protein-coding sequence.'},
         {label: '~99%', detail: 'is non-coding: regulatory elements, structural DNA, and sequence of unclear function.'},
-        {label: 'Emerging use', detail: 'DNA’s density and stability motivate its use as a digital data-storage medium (see Unit 9).'}
+        {label: 'Emerging use', detail: 'DNA’s density and stability motivate its use as a digital data-storage medium.'}
       ]},
-      relatedTopicIds: ['storage-why-dna', 'genomics-basics']
+      relatedTopicIds: ['genomics-basics']
     }
   ];
 
@@ -269,7 +269,7 @@
         {text: '~50%', correct: false, rationale: 'Roughly half is far too high for protein-coding sequence.'},
         {text: '~99%', correct: false, rationale: 'This is close to the inverse of the true figure — ~99% is non-coding.'}
       ], difficulty: 'medium', topicCheck: false},
-    {id: 'dna-genome-content-q2', topicIds: ['dna-genome-content', 'storage-why-dna'], stem: 'Why is DNA being explored as a digital data-storage medium?',
+    {id: 'dna-genome-content-q2', topicIds: ['dna-genome-content'], stem: 'Why is DNA being explored as a digital data-storage medium?',
       options: [
         {text: 'It is a chemically stable, extremely dense 4-symbol code that can persist for very long timescales', correct: true, rationale: 'Correct — these properties make DNA attractive as an alternative, ultra-dense archival medium.'},
         {text: 'It is cheaper to synthesize than to manufacture a hard drive today', correct: false, rationale: 'As of the course material, DNA synthesis/sequencing cost is a limitation, not an advantage, of current DNA storage.'},
