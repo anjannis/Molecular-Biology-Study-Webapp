@@ -248,7 +248,63 @@
         {text: 'Creating a docking site recognized by domains like SH2', correct: false, rationale: 'This is one of the described effects of phosphorylation.'},
         {text: 'Masking a binding site and disrupting protein-protein interactions', correct: false, rationale: 'This is one of the described effects of phosphorylation.'},
         {text: 'Permanently altering the protein’s amino-acid sequence', correct: true, rationale: 'Correct — phosphorylation is a reversible post-translational modification; it does not change the underlying amino-acid sequence.'}
-      ], difficulty: 'medium', topicCheck: true}
+      ], difficulty: 'medium', topicCheck: true},
+    {id: 'proteins-genetic-code-q3', topicIds: ['proteins-genetic-code'], stem: 'How many codons specify amino acids, and how many are stop codons?',
+      options: [
+        {text: '61 amino-acid codons and 3 stop codons, encoding 20 amino acids', correct: true, rationale: 'Correct — of the 64 possible codons, 61 code for the 20 amino acids (hence redundancy) and 3 are stop codons.'},
+        {text: '20 amino-acid codons and 44 stop codons', correct: false, rationale: 'There are only 3 stop codons; 20 is the number of amino acids, not codons.'},
+        {text: '64 amino-acid codons and 0 stop codons', correct: false, rationale: 'Three of the 64 codons are stop signals, so not all 64 encode amino acids.'},
+        {text: '61 stop codons and 3 amino-acid codons', correct: false, rationale: 'This reverses the numbers — there are 61 coding and 3 stop codons.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'proteins-translation-q3', topicIds: ['proteins-translation'], stem: 'What are the three phases of translation, in order?',
+      options: [
+        {text: 'Initiation → elongation → termination', correct: true, rationale: 'Correct — the ribosome assembles at the start codon (initiation), adds amino acids (elongation), and releases the finished chain at a stop codon (termination).'},
+        {text: 'Termination → elongation → initiation', correct: false, rationale: 'This reverses the order; translation begins with initiation.'},
+        {text: 'Capping → splicing → tailing', correct: false, rationale: 'Those are steps of mRNA processing, not translation.'},
+        {text: 'Denaturation → annealing → extension', correct: false, rationale: 'Those are the steps of PCR, not translation.'}
+      ], difficulty: 'easy', topicCheck: false},
+    {id: 'proteins-structure-q3', topicIds: ['proteins-structure'], stem: 'Why does the peptide bond restrict how a polypeptide backbone can fold?',
+      options: [
+        {text: 'The peptide bond is planar and does not allow free rotation', correct: true, rationale: 'Correct — partial double-bond character makes the peptide bond planar and rigid, limiting the backbone’s allowed angles.'},
+        {text: 'The peptide bond rotates freely in every direction', correct: false, rationale: 'The opposite is true — its planarity prevents free rotation about the bond.'},
+        {text: 'The peptide bond is ionic and easily broken', correct: false, rationale: 'The peptide bond is a strong covalent (amide) bond, not an ionic one.'},
+        {text: 'The peptide bond only forms between identical amino acids', correct: false, rationale: 'Peptide bonds join any two amino acids, regardless of identity.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'proteins-structure-q4', topicIds: ['proteins-structure'], stem: 'What is meant by an "essential" amino acid?',
+      options: [
+        {text: 'One of the 9 amino acids the body cannot make and must obtain from food', correct: true, rationale: 'Correct — 9 of the 20 amino acids are essential (diet-derived); the rest are non-essential because the body can synthesize them.'},
+        {text: 'An amino acid found only in enzymes', correct: false, rationale: '"Essential" refers to dietary requirement, not to which proteins the amino acid appears in.'},
+        {text: 'The single most abundant amino acid in every protein', correct: false, rationale: 'Essential status is about biosynthesis, not abundance.'},
+        {text: 'An amino acid that cannot form peptide bonds', correct: false, rationale: 'All standard amino acids form peptide bonds; that is unrelated to being essential.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'proteins-folding-qc-q3', topicIds: ['proteins-folding-qc'], stem: 'What is the role of chaperone proteins?',
+      options: [
+        {text: 'They help other proteins fold correctly (and prevent misfolding/aggregation)', correct: true, rationale: 'Correct — chaperones are themselves proteins that assist the folding of other polypeptides into their proper shape.'},
+        {text: 'They tag proteins with ubiquitin for destruction', correct: false, rationale: 'Ubiquitin tagging feeds the proteasome; that is a degradation step, not chaperone folding assistance.'},
+        {text: 'They synthesize the peptide bonds of new proteins', correct: false, rationale: 'Peptide-bond synthesis is the ribosome’s job, not the chaperone’s.'},
+        {text: 'They cut proteins into amino acids for recycling', correct: false, rationale: 'Bulk breakdown is carried out by the proteasome and autophagy, not chaperones.'}
+      ], difficulty: 'easy', topicCheck: false},
+    {id: 'proteins-folding-qc-q4', topicIds: ['proteins-folding-qc'], stem: 'Which protein deposits are characteristic of Alzheimer’s disease?',
+      options: [
+        {text: 'Neurofibrillary tau tangles and beta-amyloid plaques', correct: true, rationale: 'Correct — Alzheimer’s is marked by intracellular tau (p-Tau) tangles and extracellular beta-amyloid plaques that kill neurons.'},
+        {text: 'Alpha-synuclein deposits in the substantia nigra', correct: false, rationale: 'Those are the hallmark of Parkinson’s disease, not Alzheimer’s.'},
+        {text: 'Ubiquitin depletion throughout the cytoplasm', correct: false, rationale: 'Alzheimer’s is defined by protein aggregates, not by loss of ubiquitin.'},
+        {text: 'Excess chaperone proteins in the nucleus', correct: false, rationale: 'Chaperone accumulation is not a defining feature of Alzheimer’s pathology.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'proteins-function-q3', topicIds: ['proteins-function'], stem: 'Many enzymes depend on cofactors that are derived from:',
+      options: [
+        {text: 'Vitamins (e.g., B-vitamin derivatives)', correct: true, rationale: 'Correct — several vitamin derivatives (B6, B9, B3, B7, B5, etc.) act as critical enzyme cofactors.'},
+        {text: 'Structural DNA sequences', correct: false, rationale: 'DNA is genetic material, not a source of enzyme cofactors.'},
+        {text: 'Membrane phospholipids', correct: false, rationale: 'Phospholipids build membranes; they are not the typical source of catalytic cofactors.'},
+        {text: 'Stop codons', correct: false, rationale: 'Stop codons are translation signals, not chemical cofactors.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'proteins-regulation-q3', topicIds: ['proteins-regulation'], stem: 'What defines allosteric regulation of an enzyme?',
+      options: [
+        {text: 'A regulatory molecule binds a site other than the active site, changing the enzyme’s activity', correct: true, rationale: 'Correct — allosteric effectors bind a separate site and shift the enzyme between more- and less-active conformations.'},
+        {text: 'A molecule binds the active site and is turned into product', correct: false, rationale: 'That describes a normal substrate at the active site, not allosteric regulation.'},
+        {text: 'The enzyme’s amino-acid sequence is permanently rewritten', correct: false, rationale: 'Allosteric regulation is reversible and does not alter the protein’s sequence.'},
+        {text: 'The gene encoding the enzyme is deleted', correct: false, rationale: 'Gene deletion is a genetic change, not allosteric (activity-level) regulation.'}
+      ], difficulty: 'medium', topicCheck: false}
   ];
 
   MOLBIO.registerLecture(lecture, topics, flashcards, questions);

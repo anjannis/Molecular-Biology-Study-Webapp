@@ -227,7 +227,49 @@
         {text: 'Synthesizing ATP via oxidative phosphorylation', correct: false, rationale: 'This is a mitochondrial function, not a vacuolar one.'},
         {text: 'Transcribing rRNA', correct: false, rationale: 'This is a nucleolar function, not a vacuolar one.'},
         {text: 'Forming the mitotic spindle', correct: false, rationale: 'The spindle is a cytoskeletal (microtubule) structure, unrelated to the vacuole.'}
-      ], difficulty: 'easy', topicCheck: true}
+      ], difficulty: 'easy', topicCheck: true},
+    {id: 'cell-nucleus-q3', topicIds: ['cell-nucleus'], stem: 'What controls the movement of molecules between the nucleus and the cytoplasm?',
+      options: [
+        {text: 'Nuclear pores in the double-membrane nuclear envelope', correct: true, rationale: 'Correct — the nuclear envelope is a double membrane perforated by nuclear pores (guarded by the nuclear pore complex) that gate entry and exit.'},
+        {text: 'A single-membrane wall with no openings', correct: false, rationale: 'The nuclear envelope is a double membrane and is perforated by pores, not a sealed single wall.'},
+        {text: 'The nucleolus, which pumps molecules in and out', correct: false, rationale: 'The nucleolus makes ribosomes; it does not transport material across the envelope.'},
+        {text: 'Lysosomal enzymes that digest the membrane', correct: false, rationale: 'Lysosomes degrade material in the cytoplasm; they do not mediate nuclear transport.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'cell-cellcycle-q3', topicIds: ['cell-cellcycle'], stem: 'What are the four phases of the eukaryotic cell cycle?',
+      options: [
+        {text: 'G1, S, G2, and M', correct: true, rationale: 'Correct — G1, S and G2 make up interphase, followed by M-phase (mitosis and cytokinesis).'},
+        {text: 'Prophase, metaphase, anaphase, telophase', correct: false, rationale: 'Those are the stages within M-phase (mitosis), not the four phases of the whole cell cycle.'},
+        {text: 'Initiation, elongation, termination', correct: false, rationale: 'Those are phases of transcription/translation, not the cell cycle.'},
+        {text: 'Interphase and cytokinesis only', correct: false, rationale: 'This omits the distinct G1/S/G2 subdivisions and M-phase mitosis.'}
+      ], difficulty: 'easy', topicCheck: false},
+    {id: 'cell-er-golgi-q3', topicIds: ['cell-er-golgi'], stem: 'Which functions are carried out by the smooth ER (as opposed to the rough ER)?',
+      options: [
+        {text: 'Lipid and steroid synthesis and calcium storage', correct: true, rationale: 'Correct — smooth ER makes fatty acids, phospholipids and cholesterol/steroids and is a major Ca²⁺ store, while rough ER handles protein synthesis.'},
+        {text: 'Protein synthesis on attached ribosomes', correct: false, rationale: 'That is the rough ER, which is studded with ribosomes.'},
+        {text: 'Photosynthesis', correct: false, rationale: 'Photosynthesis occurs in chloroplasts, not the ER.'},
+        {text: 'Transcription of rRNA', correct: false, rationale: 'rRNA transcription happens in the nucleolus, not the ER.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'cell-er-golgi-q4', topicIds: ['cell-er-golgi'], stem: 'What is the main role of the Golgi apparatus?',
+      options: [
+        {text: 'To modify, glycosylate, package and sort proteins/lipids for transport or export', correct: true, rationale: 'Correct — the Golgi receives ER products and organizes, modifies (e.g., glycosylation), packages and tags them for their destinations.'},
+        {text: 'To generate most of the cell’s ATP', correct: false, rationale: 'ATP generation is the mitochondrion’s job, not the Golgi’s.'},
+        {text: 'To store the cell’s genetic material', correct: false, rationale: 'Genetic material is housed in the nucleus, not the Golgi.'},
+        {text: 'To carry out photosynthesis', correct: false, rationale: 'Photosynthesis occurs in chloroplasts.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'cell-mitochondria-q3', topicIds: ['cell-mitochondria'], stem: 'What is the primary function of mitochondria?',
+      options: [
+        {text: 'Producing ATP through cellular respiration', correct: true, rationale: 'Correct — mitochondria generate most of the cell’s ATP via the citric acid cycle and oxidative phosphorylation (the electron transport chain).'},
+        {text: 'Capturing light energy to make glucose', correct: false, rationale: 'That is photosynthesis, carried out by chloroplasts.'},
+        {text: 'Synthesizing ribosomes', correct: false, rationale: 'Ribosome subunits are assembled in the nucleolus.'},
+        {text: 'Digesting worn-out organelles in bulk', correct: false, rationale: 'Bulk degradation is handled by lysosomes/autophagy, not mitochondria.'}
+      ], difficulty: 'easy', topicCheck: false},
+    {id: 'cell-mitochondria-q4', topicIds: ['cell-mitochondria'], stem: 'What is the defining function of chloroplasts?',
+      options: [
+        {text: 'Photosynthesis — converting light energy into chemical energy (glucose)', correct: true, rationale: 'Correct — chloroplasts capture sunlight and, using CO₂ and water, produce glucose and O₂ via the light reactions and Calvin cycle.'},
+        {text: 'Converting glucose and O₂ into ATP', correct: false, rationale: 'That is cellular respiration in mitochondria, effectively the reverse process.'},
+        {text: 'Packaging proteins for secretion', correct: false, rationale: 'Protein packaging is the Golgi’s role.'},
+        {text: 'Storing and transcribing the cell’s DNA', correct: false, rationale: 'The main genome is stored and transcribed in the nucleus (chloroplasts have only their own small genome).'}
+      ], difficulty: 'easy', topicCheck: false}
   ];
 
   MOLBIO.registerLecture(lecture, topics, flashcards, questions);

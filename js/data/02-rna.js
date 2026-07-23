@@ -290,7 +290,63 @@
         {text: 'RNA polymerase II transcribing a gene into pre-mRNA', correct: false, rationale: 'This is ordinary transcription (DNA → RNA), the opposite direction.'},
         {text: 'A ribosome translating mRNA into protein', correct: false, rationale: 'Translation is RNA → protein, unrelated to reverse transcription.'},
         {text: 'DNA polymerase proofreading a newly replicated strand', correct: false, rationale: 'This is standard DNA replication proofreading, not reverse transcription.'}
-      ], difficulty: 'easy', topicCheck: true}
+      ], difficulty: 'easy', topicCheck: true},
+    {id: 'rna-central-dogma-q3', topicIds: ['rna-central-dogma'], stem: 'In the classical central dogma, information flows in which direction?',
+      options: [
+        {text: 'DNA → RNA → protein', correct: true, rationale: 'Correct — the central dogma describes DNA being transcribed to RNA, which is translated into protein.'},
+        {text: 'Protein → RNA → DNA', correct: false, rationale: 'This reverses the flow; proteins are the end product, not the template.'},
+        {text: 'RNA → DNA → protein', correct: false, rationale: 'Reverse transcription (RNA → DNA) exists as an exception, but the classical dogma starts from DNA.'},
+        {text: 'DNA → protein → RNA', correct: false, rationale: 'Protein is not an intermediate for making RNA; RNA is transcribed directly from DNA.'}
+      ], difficulty: 'easy', topicCheck: false},
+    {id: 'rna-transcription-q3', topicIds: ['rna-transcription'], stem: 'How many distinct RNA polymerases do eukaryotes use, and what does each mainly transcribe?',
+      options: [
+        {text: 'Three: Pol I and Pol III make rRNA and tRNA, Pol II makes most protein-coding (mRNA) transcripts', correct: true, rationale: 'Correct — eukaryotes have three nuclear RNA polymerases with divided labour; Pol II handles most protein-coding genes.'},
+        {text: 'One polymerase that transcribes all genes', correct: false, rationale: 'A single RNA polymerase is the bacterial arrangement; eukaryotes use three.'},
+        {text: 'Two: one for coding genes and one for all non-coding RNA', correct: false, rationale: 'There are three, not two, and the division is not a simple coding/non-coding split.'},
+        {text: 'Three, but Pol II makes rRNA and Pol I makes mRNA', correct: false, rationale: 'This swaps their roles — Pol II makes mRNA, while Pol I makes rRNA.'}
+      ], difficulty: 'hard', topicCheck: false},
+    {id: 'rna-transcription-q4', topicIds: ['rna-transcription'], stem: 'How does Topoisomerase II differ from Topoisomerase I when relieving transcription-induced supercoiling?',
+      options: [
+        {text: 'Topo II makes double-strand breaks and requires ATP; Topo I makes single-strand breaks without ATP', correct: true, rationale: 'Correct — Topo II passes one duplex through a double-strand break (ATP-dependent), whereas Topo I nicks a single strand and needs no ATP.'},
+        {text: 'Topo II makes single-strand breaks; Topo I makes double-strand breaks', correct: false, rationale: 'This reverses the two enzymes — Topo I is the single-strand nicking one.'},
+        {text: 'Both are ATP-independent and interchangeable', correct: false, rationale: 'Topo II specifically requires ATP, so they are not interchangeable.'},
+        {text: 'Topo II synthesizes RNA while Topo I unwinds DNA', correct: false, rationale: 'Neither topoisomerase synthesizes RNA; both relieve torsional stress in DNA.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'rna-processing-q3', topicIds: ['rna-processing'], stem: 'What is added to the 3′ end of a eukaryotic mRNA during processing?',
+      options: [
+        {text: 'A poly-A tail', correct: true, rationale: 'Correct — 3′ polyadenylation adds a poly-A tail that aids stability, export and translation.'},
+        {text: 'A 7-methylguanosine cap', correct: false, rationale: 'The 7-methylguanosine cap is added to the 5′ end, not the 3′ end.'},
+        {text: 'An intron', correct: false, rationale: 'Introns are removed by splicing, not added at the 3′ end.'},
+        {text: 'A ribosome', correct: false, rationale: 'Ribosomes translate mRNA later; they are not appended to the transcript during processing.'}
+      ], difficulty: 'easy', topicCheck: false},
+    {id: 'rna-catalysis-q3', topicIds: ['rna-catalysis'], stem: 'Why is the ribosome considered a ribozyme?',
+      options: [
+        {text: 'Its peptidyl-transferase (peptide-bond-forming) activity is carried out by rRNA, not protein', correct: true, rationale: 'Correct — the catalytic peptidyl-transferase centre in the large subunit is made of rRNA, so the ribosome is an RNA enzyme.'},
+        {text: 'It is built entirely of protein with no RNA', correct: false, rationale: 'That would make it a protein enzyme; ribosomes are ~60% RNA and the RNA does the catalysis.'},
+        {text: 'It copies DNA into RNA', correct: false, rationale: 'Copying DNA into RNA is transcription by RNA polymerase, not what the ribosome does.'},
+        {text: 'It uses DNA to catalyze peptide bonds', correct: false, rationale: 'The ribosome contains rRNA, not DNA, and rRNA performs the catalysis.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'rna-catalysis-q4', topicIds: ['rna-catalysis'], stem: 'What property of RNA makes the "RNA world" hypothesis plausible?',
+      options: [
+        {text: 'RNA can both store genetic information and catalyze chemical reactions', correct: true, rationale: 'Correct — because RNA is both an information carrier and a catalyst (ribozyme), it could in principle support early life on its own.'},
+        {text: 'RNA is chemically more stable than DNA', correct: false, rationale: 'RNA is actually less stable than DNA; stability is not the basis of the hypothesis.'},
+        {text: 'RNA can only be made by proteins', correct: false, rationale: 'The hypothesis proposes RNA acting before dedicated protein enzymes existed, not depending on them.'},
+        {text: 'RNA cannot fold into three-dimensional shapes', correct: false, rationale: 'The opposite is true — RNA’s ability to fold into 3-D structures is what enables its catalytic activity.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'rna-regulation-q3', topicIds: ['rna-regulation'], stem: 'How do microRNAs (miRNAs) typically regulate gene expression?',
+      options: [
+        {text: 'They base-pair with target mRNAs to silence them, and one miRNA can regulate many targets', correct: true, rationale: 'Correct — miRNAs guide silencing of complementary mRNAs in a “one-to-many, many-to-one” regulatory web.'},
+        {text: 'They add methyl groups directly to DNA', correct: false, rationale: 'DNA methylation is done by DNA methyltransferases, not by miRNAs.'},
+        {text: 'They are translated into small regulatory proteins', correct: false, rationale: 'miRNAs are non-coding; they act as RNA, not as proteins.'},
+        {text: 'They replace the ribosome during translation', correct: false, rationale: 'miRNAs modulate translation of targets; they do not substitute for the ribosome.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'rna-reverse-transcription-q3', topicIds: ['rna-reverse-transcription'], stem: 'In retrotransposition ("jumping genes"), how does a new DNA copy get inserted elsewhere in the genome?',
+      options: [
+        {text: 'An RNA intermediate is reverse-transcribed into DNA that inserts at a new location', correct: true, rationale: 'Correct — retrotransposons are copied via an RNA intermediate that is reverse-transcribed and integrated elsewhere.'},
+        {text: 'DNA is cut and pasted directly with no RNA involved', correct: false, rationale: 'That describes DNA-only ("cut-and-paste") transposition, not retrotransposition, which uses an RNA intermediate.'},
+        {text: 'The ribosome copies protein back into DNA', correct: false, rationale: 'Proteins are not templates for DNA; retrotransposition uses an RNA intermediate.'},
+        {text: 'Two chromosomes exchange arms via translocation', correct: false, rationale: 'Translocation is a chromosome rearrangement, unrelated to retrotransposon insertion.'}
+      ], difficulty: 'medium', topicCheck: false}
   ];
 
   MOLBIO.registerLecture(lecture, topics, flashcards, questions);

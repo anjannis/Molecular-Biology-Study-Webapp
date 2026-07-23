@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# JetBrains IDE
+.idea/
+
+# Node (only used for local QA scripts)
+node_modules/

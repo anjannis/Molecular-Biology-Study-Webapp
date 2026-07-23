@@ -198,7 +198,42 @@
         {text: 'Because they have not yet undergone peer review', correct: true, rationale: 'Correct — this is precisely the stated reason for critical appraisal.'},
         {text: 'Because they are never publicly accessible', correct: false, rationale: 'Preprints are explicitly open-access documents, publicly available before peer review.'},
         {text: 'Because they are required reading for FAIR compliance', correct: false, rationale: 'FAIR principles concern data-sharing standards, not a preprint-reading requirement.'}
-      ], difficulty: 'medium', topicCheck: true}
+      ], difficulty: 'medium', topicCheck: true},
+    {id: 'transcriptomics-splicing-q3', topicIds: ['transcriptomics-splicing'], stem: 'What is the purpose of nonsense-mediated mRNA decay (NMD)?',
+      options: [
+        {text: 'It degrades mRNAs carrying premature termination codons, preventing truncated, potentially harmful proteins', correct: true, rationale: 'Correct — NMD is a conserved quality-control pathway that eliminates transcripts with premature stop codons before they are translated.'},
+        {text: 'It adds the 5′ cap to newly made mRNAs', correct: false, rationale: 'Capping is a processing step; NMD actually removes the cap as it degrades faulty transcripts.'},
+        {text: 'It splices introns out of pre-mRNA', correct: false, rationale: 'Intron removal is done by the spliceosome; NMD degrades already-defective mRNAs.'},
+        {text: 'It reverse-transcribes mRNA into DNA', correct: false, rationale: 'Reverse transcription is unrelated to NMD, which degrades faulty mRNA.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'transcriptomics-measuring-q3', topicIds: ['transcriptomics-measuring'], stem: 'What does the "transcriptome" refer to?',
+      options: [
+        {text: 'The complete collection of all RNA transcripts in a cell or organism', correct: true, rationale: 'Correct — transcriptomics studies the full set of RNA transcripts and quantifies gene-expression levels.'},
+        {text: 'The full set of an organism’s DNA', correct: false, rationale: 'That is the genome; the transcriptome is the set of RNA transcripts.'},
+        {text: 'The complete set of an organism’s proteins', correct: false, rationale: 'That is the proteome, not the transcriptome.'},
+        {text: 'The collection of all lipids in a membrane', correct: false, rationale: 'That would be the lipidome; the transcriptome concerns RNA.'}
+      ], difficulty: 'easy', topicCheck: false},
+    {id: 'transcriptomics-resolution-q3', topicIds: ['transcriptomics-resolution'], stem: 'What distinguishes spatial transcriptomics from bulk and single-cell RNA-seq?',
+      options: [
+        {text: 'It measures gene expression while preserving where each transcript sits within the tissue', correct: true, rationale: 'Correct — spatial transcriptomics (Method of the Year 2020) retains tissue location, which bulk and standard single-cell methods lose.'},
+        {text: 'It can only be applied to bacteria', correct: false, rationale: 'Spatial transcriptomics is widely used on eukaryotic tissues such as brain sections.'},
+        {text: 'It sequences DNA rather than RNA', correct: false, rationale: 'Like other transcriptomic methods it profiles RNA, not DNA.'},
+        {text: 'It discards all positional information', correct: false, rationale: 'The opposite — its defining feature is keeping positional information.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'transcriptomics-diffexp-q3', topicIds: ['transcriptomics-diffexp'], stem: 'In a WGCNA co-expression network, what are "hub genes"?',
+      options: [
+        {text: 'Highly connected genes within a module, often flagged as candidate regulators or drug targets', correct: true, rationale: 'Correct — hub genes are central, highly connected nodes in a module and are used to predict key regulators and potential drug targets.'},
+        {text: 'Genes that are never expressed in any tissue', correct: false, rationale: 'Hub genes are highly connected and expressed, not silent.'},
+        {text: 'The physical centromeres of chromosomes', correct: false, rationale: 'Hub genes are a network concept, not a chromosomal structure.'},
+        {text: 'Genes located exactly at the centre of a chromosome', correct: false, rationale: '"Hub" refers to network centrality, not chromosomal position.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'transcriptomics-ml-q3', topicIds: ['transcriptomics-ml'], stem: 'What do the FAIR principles promote for transcriptomic (and other) research data?',
+      options: [
+        {text: 'That data be Findable, Accessible, Interoperable and Reusable', correct: true, rationale: 'Correct — FAIR stands for Findable, Accessible, Interoperable and Reusable, supported by repositories such as GEO and clear metadata/version control.'},
+        {text: 'That data be kept private and never shared', correct: false, rationale: 'FAIR promotes responsible sharing and reuse, the opposite of keeping data hidden.'},
+        {text: 'That only peer-reviewed data may be stored', correct: false, rationale: 'FAIR concerns how data is described and shared, not whether it has been peer reviewed.'},
+        {text: 'That data be deleted after each study', correct: false, rationale: 'Reusability is a core aim of FAIR, so deletion runs counter to it.'}
+      ], difficulty: 'medium', topicCheck: false}
   ];
 
   MOLBIO.registerLecture(lecture, topics, flashcards, questions);

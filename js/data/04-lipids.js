@@ -223,7 +223,49 @@
         {text: 'Vitamins A, D, E, and K', correct: true, rationale: 'Correct — these are the classic fat-soluble vitamins.'},
         {text: 'Only vitamin C', correct: false, rationale: 'Vitamin C is water-soluble.'},
         {text: 'All vitamins equally', correct: false, rationale: 'Vitamins differ meaningfully in solubility; not all are fat-soluble.'}
-      ], difficulty: 'easy', topicCheck: true}
+      ], difficulty: 'easy', topicCheck: true},
+    {id: 'lipids-categories-q3', topicIds: ['lipids-categories'], stem: 'What is the molecular make-up of a triglyceride, the body’s main energy-storage fat?',
+      options: [
+        {text: 'A glycerol backbone joined to three fatty acids', correct: true, rationale: 'Correct — triglycerides are glycerol esterified to three fatty-acid tails and are the most common fat stored for energy.'},
+        {text: 'A glycerol backbone joined to a phosphate head group', correct: false, rationale: 'That describes a phospholipid, a membrane lipid, not a triglyceride.'},
+        {text: 'Four fused carbon rings', correct: false, rationale: 'Four fused rings define a sterol such as cholesterol, not a triglyceride.'},
+        {text: 'A chain of amino acids', correct: false, rationale: 'Amino-acid chains are proteins, not lipids.'}
+      ], difficulty: 'easy', topicCheck: false},
+    {id: 'lipids-membrane-lipids-q3', topicIds: ['lipids-membrane-lipids'], stem: 'Why do phospholipids spontaneously form a bilayer in water?',
+      options: [
+        {text: 'They are amphipathic — hydrophilic heads face the water while hydrophobic tails cluster inward', correct: true, rationale: 'Correct — having both a water-loving head and water-avoiding tails drives phospholipids to self-assemble into a bilayer.'},
+        {text: 'They are entirely hydrophobic and repel each other', correct: false, rationale: 'If they were entirely hydrophobic they would not orient heads toward water; the dual nature is the key.'},
+        {text: 'They are entirely hydrophilic and dissolve completely', correct: false, rationale: 'Fully hydrophilic molecules would just dissolve rather than form a membrane.'},
+        {text: 'They form covalent bonds linking every lipid into a sheet', correct: false, rationale: 'The bilayer is held by the hydrophobic effect and weak interactions, not covalent cross-links.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'lipids-membrane-structure-q3', topicIds: ['lipids-membrane-structure'], stem: 'What are lipid rafts?',
+      options: [
+        {text: 'Temporary, specialized microdomains that organize certain lipids and proteins within the membrane', correct: true, rationale: 'Correct — lipid rafts are dynamic microdomains that concentrate specific lipids/proteins as a membrane-organizing principle.'},
+        {text: 'Permanent covalent patches that never move', correct: false, rationale: 'Rafts are dynamic and transient, not permanent fixed patches.'},
+        {text: 'Gaps in the membrane where there is no lipid', correct: false, rationale: 'Rafts are lipid-rich domains, not holes in the bilayer.'},
+        {text: 'Vesicles that have fully detached from the cell', correct: false, rationale: 'Rafts are regions within an intact membrane, not free vesicles.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'lipids-cholesterol-q3', topicIds: ['lipids-cholesterol'], stem: 'Besides being a hormone precursor, what structural role does cholesterol play in membranes?',
+      options: [
+        {text: 'It modulates membrane fluidity', correct: true, rationale: 'Correct — cholesterol inserts among phospholipids and buffers fluidity, keeping membranes from becoming too fluid or too rigid.'},
+        {text: 'It carries the cell’s genetic information', correct: false, rationale: 'Genetic information is carried by DNA, not cholesterol.'},
+        {text: 'It catalyzes peptide-bond formation', correct: false, rationale: 'Peptide bonds are made by the ribosome; cholesterol is not catalytic here.'},
+        {text: 'It forms the sugar coat of the glycocalyx', correct: false, rationale: 'The glycocalyx is built from glycolipids and glycoproteins, not cholesterol.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'lipids-glycolipids-asymmetry-q3', topicIds: ['lipids-glycolipids-asymmetry'], stem: 'Glycolipids sit in the outer membrane leaflet and are important for:',
+      options: [
+        {text: 'Cell adhesion and recognition (they can be bound by lectins)', correct: true, rationale: 'Correct — these sugar-bearing lipids project outward and mediate cell–cell adhesion and recognition, and are recognized by lectins.'},
+        {text: 'Copying DNA during replication', correct: false, rationale: 'DNA replication is unrelated to membrane glycolipids.'},
+        {text: 'Generating ATP in the mitochondrial matrix', correct: false, rationale: 'ATP synthesis is a mitochondrial process, not a glycolipid function.'},
+        {text: 'Splicing pre-mRNA in the nucleus', correct: false, rationale: 'Splicing is carried out by the spliceosome, unrelated to glycolipids.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'lipids-signaling-q3', topicIds: ['lipids-signaling'], stem: 'What is the main physiological role of bile salts such as cholic acid?',
+      options: [
+        {text: 'Aiding the digestion (emulsification) of dietary fats', correct: true, rationale: 'Correct — bile salts are lipid-derived molecules that emulsify fats to aid their digestion and absorption.'},
+        {text: 'Triggering inflammation', correct: false, rationale: 'That is the role of prostaglandins, not bile salts.'},
+        {text: 'Acting as fat-soluble vitamins', correct: false, rationale: 'Fat-soluble vitamins are A, D, E and K; bile salts are a separate class of molecule.'},
+        {text: 'Storing energy in fat cells', correct: false, rationale: 'Energy storage is the role of triglycerides, not bile salts.'}
+      ], difficulty: 'medium', topicCheck: false}
   ];
 
   MOLBIO.registerLecture(lecture, topics, flashcards, questions);

@@ -275,7 +275,63 @@
         {text: 'It is cheaper to synthesize than to manufacture a hard drive today', correct: false, rationale: 'As of the course material, DNA synthesis/sequencing cost is a limitation, not an advantage, of current DNA storage.'},
         {text: 'It can be read at electronic speeds comparable to RAM', correct: false, rationale: 'DNA read/write speeds are far slower than electronic memory; density and longevity are the appeal, not speed.'},
         {text: 'It naturally uses a binary (2-symbol) code, matching computer architectures', correct: false, rationale: 'DNA uses a 4-letter code (A/T/C/G), not binary; encoding schemes must convert between the two.'}
-      ], difficulty: 'medium', topicCheck: true}
+      ], difficulty: 'medium', topicCheck: true},
+    {id: 'dna-structure-q3', topicIds: ['dna-structure'], stem: 'What sugar forms part of the DNA backbone?',
+      options: [
+        {text: 'Deoxyribose', correct: true, rationale: 'Correct — DNA’s backbone is built from 2′-deoxyribose; the “D” in DNA stands for deoxyribose.'},
+        {text: 'Ribose', correct: false, rationale: 'Ribose is the sugar in RNA — it carries an extra 2′-hydroxyl group that DNA lacks.'},
+        {text: 'Glucose', correct: false, rationale: 'Glucose is a metabolic fuel and a building block of polysaccharides, not the nucleic-acid backbone sugar.'},
+        {text: 'Sucrose', correct: false, rationale: 'Sucrose is a disaccharide (table sugar), unrelated to the nucleotide backbone.'}
+      ], difficulty: 'easy', topicCheck: false},
+    {id: 'dna-structure-q4', topicIds: ['dna-structure'], stem: 'Beyond being the monomers of DNA, nucleotides also serve which cellular role?',
+      options: [
+        {text: 'Carrying chemical energy, as in ATP', correct: true, rationale: 'Correct — the course stresses that nucleotides have many functions beyond DNA, including energy transfer (ATP) and cell signalling.'},
+        {text: 'Forming the catalytic core of every enzyme', correct: false, rationale: 'Most enzymes are proteins; nucleotides are not the general catalytic core of enzymes.'},
+        {text: 'Building the fibres of the cytoskeleton', correct: false, rationale: 'The cytoskeleton is made of proteins such as actin and tubulin, not nucleotides.'},
+        {text: 'Making up the phospholipid bilayer', correct: false, rationale: 'Membranes are built from lipids; nucleotides are not lipids.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'dna-packaging-q3', topicIds: ['dna-packaging'], stem: 'Which sequence correctly orders DNA packaging from least to most condensed?',
+      options: [
+        {text: 'Nucleosomes (“beads on a string”) → zigzag chromatin fibre → looped domains → condensed chromosome', correct: true, rationale: 'Correct — packaging is hierarchical, from nucleosomes up to the fully condensed mitotic chromosome.'},
+        {text: 'Condensed chromosome → looped domains → zigzag fibre → nucleosomes', correct: false, rationale: 'This is the reverse order — most-condensed to least-condensed.'},
+        {text: 'Zigzag fibre → nucleosomes → condensed chromosome → looped domains', correct: false, rationale: 'Nucleosomes form before the zigzag fibre, and loops precede the fully condensed chromosome.'},
+        {text: 'Looped domains → nucleosomes → condensed chromosome → zigzag fibre', correct: false, rationale: 'Nucleosomes are the first level of packaging, not looped domains.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'dna-cellcycle-q3', topicIds: ['dna-cellcycle'], stem: 'What is the primary role of telomeres?',
+      options: [
+        {text: 'To protect the ends of chromosomes', correct: true, rationale: 'Correct — telomeres cap and protect chromosome ends; their erosion is linked to ageing and disease.'},
+        {text: 'To attach sister chromatids for segregation', correct: false, rationale: 'That is the centromere’s role, not the telomere’s.'},
+        {text: 'To mark where replication begins', correct: false, rationale: 'Replication starts at origins of replication, not at telomeres.'},
+        {text: 'To wrap DNA around histone octamers', correct: false, rationale: 'DNA–histone wrapping forms nucleosomes; telomeres are chromosome-end structures.'}
+      ], difficulty: 'easy', topicCheck: false},
+    {id: 'dna-cellcycle-q4', topicIds: ['dna-cellcycle'], stem: 'What is the function of cell-cycle checkpoints?',
+      options: [
+        {text: 'They verify that a stage completed correctly before the cycle proceeds, and can trigger repeat or exit', correct: true, rationale: 'Correct — checkpoints monitor synthesis, growth and mitosis, allowing progression, repeat, or exit rather than a simple pass/fail.'},
+        {text: 'They physically pull sister chromatids apart', correct: false, rationale: 'Chromatid separation is carried out by the spindle in anaphase, not by checkpoints.'},
+        {text: 'They synthesize the RNA primers needed for replication', correct: false, rationale: 'That is primase’s job during replication, unrelated to checkpoint control.'},
+        {text: 'They shorten telomeres at each division', correct: false, rationale: 'Telomere shortening is a consequence of end-replication, not a checkpoint function.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'dna-replication-q3', topicIds: ['dna-replication'], stem: 'What does primase contribute to DNA replication?',
+      options: [
+        {text: 'It synthesizes short RNA primers that give DNA polymerase a starting point', correct: true, rationale: 'Correct — DNA polymerase cannot start a strand from scratch, so primase lays down RNA primers to extend from (repeatedly on the lagging strand).'},
+        {text: 'It unwinds the double helix ahead of the fork', correct: false, rationale: 'Unwinding is done by helicase, not primase.'},
+        {text: 'It seals the gaps between Okazaki fragments', correct: false, rationale: 'Sealing nicks between fragments is DNA ligase’s role.'},
+        {text: 'It relieves the supercoiling ahead of the fork', correct: false, rationale: 'Relieving torsional stress is the job of topoisomerases.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'dna-damage-repair-q3', topicIds: ['dna-damage-repair'], stem: 'The course slide “one brain – many genomes” points to which phenomenon?',
+      options: [
+        {text: 'Somatic mutations accumulate so cells within one individual are not all genetically identical', correct: true, rationale: 'Correct — replication errors and DNA damage over a lifetime create somatic mosaicism, so even neurons in one brain can differ genetically.'},
+        {text: 'Every person carries genomes from two different species', correct: false, rationale: 'Mosaicism concerns variation among an individual’s own cells, not inter-species genomes.'},
+        {text: 'The brain uses RNA instead of DNA as its genome', correct: false, rationale: 'All human somatic cells, neurons included, use DNA as their genome.'},
+        {text: 'Each neuron deletes its genome as it matures', correct: false, rationale: 'Neurons retain their genome; they do not discard it.'}
+      ], difficulty: 'hard', topicCheck: false},
+    {id: 'dna-genome-content-q3', topicIds: ['dna-genome-content'], stem: 'If only ~1% of the human genome codes for protein, what best describes most of the remaining ~99%?',
+      options: [
+        {text: 'Regulatory and structural sequence, plus sequence of unclear function', correct: true, rationale: 'Correct — the non-coding majority includes gene-regulatory elements and structural DNA; “non-coding” is not the same as “useless”.'},
+        {text: 'Entirely non-functional “junk” with no biological role', correct: false, rationale: 'A classic trap — much non-coding DNA is regulatory or structural, so dismissing all of it as junk is wrong.'},
+        {text: 'Extra identical copies of every protein-coding gene', correct: false, rationale: 'The non-coding fraction is not simply duplicated coding genes.'},
+        {text: 'Sequence that is chemically different from the coding 1%', correct: false, rationale: 'Coding and non-coding DNA share the same chemistry; they differ in function, not chemical make-up.'}
+      ], difficulty: 'medium', topicCheck: false}
   ];
 
   MOLBIO.registerLecture(lecture, topics, flashcards, questions);

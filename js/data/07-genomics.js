@@ -240,7 +240,49 @@
         {text: 'Because DNA sequencing itself requires AI to function at all', correct: false, rationale: 'Sequencing chemistry does not require AI; AI is used downstream for interpretation.'},
         {text: 'Because AI eliminates the need for reference genomes', correct: false, rationale: 'Reference genomes remain a foundational tool alongside AI methods.'},
         {text: 'Because genomics data is small and easily interpreted manually', correct: false, rationale: 'This is the opposite of the actual motivation — genomics data is very large and complex.'}
-      ], difficulty: 'medium', topicCheck: true}
+      ], difficulty: 'medium', topicCheck: true},
+    {id: 'genomics-basics-q3', topicIds: ['genomics-basics'], stem: 'How did the cost of sequencing a human genome change from the Human Genome Project to today?',
+      options: [
+        {text: 'It collapsed from roughly $2.7 billion to under $1,000 per genome', correct: true, rationale: 'Correct — next-generation (massively parallel) sequencing drove the cost down from the ~$2.7B Human Genome Project to less than $1,000 per genome.'},
+        {text: 'It rose sharply because sequencing became more complex', correct: false, rationale: 'The trend is the opposite — sequencing became dramatically cheaper.'},
+        {text: 'It stayed roughly the same for decades', correct: false, rationale: 'Costs fell by many orders of magnitude, not stayed flat.'},
+        {text: 'It dropped only slightly, to about $1 million per genome', correct: false, rationale: 'The figure is under ~$1,000 per genome, far lower than $1 million.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'genomics-assembly-reference-q3', topicIds: ['genomics-assembly-reference'], stem: 'What is a human "reference genome" such as GRCh38?',
+      options: [
+        {text: 'A composite, annotated standard template used to align reads and interpret individual genomes', correct: true, rationale: 'Correct — the reference is a composite (not one person’s genome) that serves as a scaffold for alignment, variant calling and annotation; T2T (2022) later filled its remaining gaps.'},
+        {text: 'The exact genome sequence of one specific named person', correct: false, rationale: 'The reference is a composite standard, not a single individual’s genome.'},
+        {text: 'A list of only the disease-causing mutations in a population', correct: false, rationale: 'The reference is a full template sequence, not a catalogue of pathogenic variants.'},
+        {text: 'A temporary draft that is discarded after each study', correct: false, rationale: 'The reference is a persistent, widely shared standard, not a throwaway draft.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'genomics-variation-q3', topicIds: ['genomics-variation'], stem: 'In HGVS nomenclature, what does a variant written with a "p." prefix describe?',
+      options: [
+        {text: 'A change at the protein level (amino-acid change)', correct: true, rationale: 'Correct — "p." denotes protein-level notation (e.g., p.Ser1785Leu); "g." is genomic and "c." is coding/cDNA.'},
+        {text: 'A change in the genomic DNA coordinate', correct: false, rationale: 'Genomic-level changes use the "g." prefix, not "p.".'},
+        {text: 'A change in the coding (cDNA) sequence', correct: false, rationale: 'Coding-sequence changes use the "c." prefix; "p." is reserved for the protein level.'},
+        {text: 'A change in a promoter region only', correct: false, rationale: 'The prefixes denote the reference frame (genomic/coding/protein), not a specific regulatory region.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'genomics-variant-types-q3', topicIds: ['genomics-variant-types'], stem: 'What is a copy-number variant (CNV)?',
+      options: [
+        {text: 'A structural variant in which a segment of DNA is gained or lost (duplicated or deleted)', correct: true, rationale: 'Correct — CNVs are structural variants involving gains or losses of larger DNA segments, unlike single-base SNPs.'},
+        {text: 'A single-base substitution at one position', correct: false, rationale: 'That is a single-nucleotide variant (SNP/SNV), not a copy-number variant.'},
+        {text: 'A change that only affects mitochondrial DNA', correct: false, rationale: 'CNVs occur across the nuclear genome and are not restricted to mtDNA.'},
+        {text: 'A reversible chemical mark on histones', correct: false, rationale: 'That describes an epigenetic modification, not a copy-number variant.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'genomics-inheritance-q3', topicIds: ['genomics-inheritance'], stem: 'A condition that requires two mutant alleles to manifest, caused by a gene on chromosomes 1–22, is:',
+      options: [
+        {text: 'Autosomal recessive', correct: true, rationale: 'Correct — "recessive" means two copies are needed, and "autosomal" means the gene is on chromosomes 1–22 (not X or Y).'},
+        {text: 'Autosomal dominant', correct: false, rationale: 'Dominant conditions need only one mutant allele, so this is wrong on the recessive/dominant axis.'},
+        {text: 'X-linked dominant', correct: false, rationale: 'X-linked means the gene is on the X chromosome (gonosomal), not autosomal.'},
+        {text: 'Mitochondrial', correct: false, rationale: 'Mitochondrial inheritance involves mtDNA and is maternally transmitted, not autosomal.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'genomics-ai-ethics-q3', topicIds: ['genomics-ai-ethics'], stem: 'What does the AI system AlphaFold predict?',
+      options: [
+        {text: 'The 3-D folded structure of a protein from its sequence', correct: true, rationale: 'Correct — AlphaFold predicts protein structure, which supports tasks such as assessing the impact of variants.'},
+        {text: 'Which people share a family surname', correct: false, rationale: 'AlphaFold is a structure-prediction tool, unrelated to genealogy by name.'},
+        {text: 'The retail price of a genome test', correct: false, rationale: 'AlphaFold predicts protein structure, not costs.'},
+        {text: 'The weather’s effect on gene expression', correct: false, rationale: 'This is unrelated to AlphaFold’s protein-structure prediction.'}
+      ], difficulty: 'medium', topicCheck: false}
   ];
 
   MOLBIO.registerLecture(lecture, topics, flashcards, questions);

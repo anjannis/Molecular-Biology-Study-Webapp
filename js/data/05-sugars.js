@@ -196,7 +196,28 @@
         {text: 'Differences in hemoglobin protein sequence', correct: false, rationale: 'ABO typing in this course is explicitly tied to surface sugars, not hemoglobin variants.'},
         {text: 'Differences in mitochondrial DNA', correct: false, rationale: 'mtDNA variation is unrelated to ABO blood typing.'},
         {text: 'The presence or absence of a nucleus in red blood cells', correct: false, rationale: 'This is unrelated to ABO blood group determination.'}
-      ], difficulty: 'medium', topicCheck: true}
+      ], difficulty: 'medium', topicCheck: true},
+    {id: 'sugars-monosaccharides-q3', topicIds: ['sugars-monosaccharides'], stem: 'How do hexoses and pentoses differ, and what ring size does each of glucose and ribose form?',
+      options: [
+        {text: 'Hexoses have 6 carbons and glucose forms a 6-membered ring; pentoses have 5 carbons and ribose forms a 5-membered ring', correct: true, rationale: 'Correct — monosaccharides are classed by carbon-chain length, and glucose (a hexose) closes into a six-membered ring while ribose (a pentose) closes into a five-membered ring.'},
+        {text: 'Hexoses have 5 carbons and pentoses have 6 carbons', correct: false, rationale: 'The prefixes are reversed — "hex" = 6 and "pent" = 5.'},
+        {text: 'Both hexoses and pentoses always form six-membered rings', correct: false, rationale: 'Ribose (a pentose) forms a five-membered ring, so ring size is not always six.'},
+        {text: 'Hexoses and pentoses differ only in their stereochemistry, not carbon count', correct: false, rationale: 'They differ specifically in the number of carbons in the chain.'}
+      ], difficulty: 'easy', topicCheck: false},
+    {id: 'sugars-stereochemistry-q3', topicIds: ['sugars-stereochemistry'], stem: 'What are anomers?',
+      options: [
+        {text: 'The alpha and beta isomers of a sugar, differing at the new chiral centre formed upon ring closure', correct: true, rationale: 'Correct — when a monosaccharide cyclises, a new chiral centre appears; the alpha and beta forms at that carbon are anomers.'},
+        {text: 'Mirror-image D and L forms of a sugar', correct: false, rationale: 'Those are enantiomers, not anomers.'},
+        {text: 'Sugars differing in hydroxyl arrangement at one or two carbons', correct: false, rationale: 'That describes epimers, not anomers.'},
+        {text: 'Two different sugars with different chemical formulas', correct: false, rationale: 'Anomers share the same formula; they differ only at the anomeric carbon.'}
+      ], difficulty: 'medium', topicCheck: false},
+    {id: 'sugars-polysaccharides-q3', topicIds: ['sugars-polysaccharides'], stem: 'Which statement about cellulose is correct?',
+      options: [
+        {text: 'It is the most abundant biopolymer on Earth and gives plant cell walls structural integrity', correct: true, rationale: 'Correct — cellulose is a linear glucose polymer forming microfibrils in plant cell walls, and is the most abundant biopolymer on Earth.'},
+        {text: 'It is the main energy-storage molecule in animals', correct: false, rationale: 'Animal energy storage is glycogen; cellulose is structural and made by plants.'},
+        {text: 'It is easily digested by human enzymes', correct: false, rationale: 'Animals lack the enzymes to break cellulose’s beta-linkages, so humans cannot digest it.'},
+        {text: 'It is a disaccharide of glucose and fructose', correct: false, rationale: 'That describes sucrose; cellulose is a long glucose polysaccharide.'}
+      ], difficulty: 'easy', topicCheck: false}
   ];
 
   MOLBIO.registerLecture(lecture, topics, flashcards, questions);
